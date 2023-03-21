@@ -1,0 +1,26 @@
+spring:
+  jpa:  
+    hibernate:  
+      ddl-auto: update
+  
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/CorebankingServices?useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password:  Bala@1234
+
+  flyway:
+   url: jdbc:mysql://localhost:3306/CorebankingServices
+   schemas: CorebankingServices
+   user: "root"
+   password: "Bala@1234"
+   baselineOnMigrate: true
+   enabled: true
+
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl.defaultZone: http://localhost:8761/eureka/
+ 
